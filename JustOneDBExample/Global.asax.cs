@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Configuration;
-using System.Data.SqlClient;
 using System.Linq;
 using System.Web.Mvc;
 using System.Web.Routing;
@@ -64,13 +63,9 @@ namespace JustOneDBExample
 		{
 			var uriString = ConfigurationManager.AppSettings["JUSTONEDB_DBI_URL"];
 			var uri = new Uri(uriString);
-			var connectionString = new SqlConnectionStringBuilder
-			{
-				DataSource = uri.Host,
-				InitialCatalog = uri.AbsolutePath.Trim('/'),
-				UserID = uri.UserInfo.Split(':').First(),
-				Password = uri.UserInfo.Split(':').Last(),
-			}.ConnectionString;
+			var connectionString = string.Format("Server={0};Port={1};Database={2};User Id={3};Password={4};",
+				uri.Host, uri.Port, uri.AbsolutePath.Trim('/'), uri.UserInfo.Split(':').First(),
+				uri.UserInfo.Split(':').Last());
 
 			var autoMap = AutoMap.AssemblyOf<Entity>()
 				.Where(t => typeof(Entity).IsAssignableFrom(t));
