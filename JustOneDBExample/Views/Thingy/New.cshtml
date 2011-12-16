@@ -1,0 +1,18 @@
+﻿@model JustOneDBExample.Models.Thingy
+
+@{
+	ViewBag.Title = "New";
+}
+
+<h2>New</h2>
+<div>
+	@using (Html.BeginForm("Create", "Thingy")){
+		<p>
+			@Html.LabelFor(x => x.Name)
+			@Html.TextBoxFor(x => x.Name)
+		</p>
+		<p>
+			<input type="submit" value="Submit" />
+		</p>
+	}
+</div>

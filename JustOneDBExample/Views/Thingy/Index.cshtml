@@ -1,0 +1,13 @@
+﻿@model IEnumerable<JustOneDBExample.Models.Thingy>
+
+@{
+	ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<ul>
+	@foreach (var thing in Model)
+	{
+		<li>@thing.Name</li>
+	}
+</ul>
