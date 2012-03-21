@@ -6,14 +6,14 @@ using System.Web.Routing;
 using FluentNHibernate.Automapping;
 using FluentNHibernate.Cfg;
 using FluentNHibernate.Cfg.Db;
-using JustOneDBExample.Models;
-using JustOneDBExample.Mvc;
+using PostgreSQLExample.Models;
+using PostgreSQLExample.Mvc;
 using NHibernate;
 using NHibernate.Tool.hbm2ddl;
 using StructureMap;
 using NHConfig = NHibernate.Cfg;
 
-namespace JustOneDBExample
+namespace PostgreSQLExample
 {
 	public class MvcApplication : System.Web.HttpApplication
 	{

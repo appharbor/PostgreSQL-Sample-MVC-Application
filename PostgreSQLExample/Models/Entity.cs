@@ -1,5 +1,5 @@
 ﻿
-namespace JustOneDBExample.Models
+namespace PostgreSQLExample.Models
 {
 	public abstract class Entity
 	{

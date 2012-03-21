@@ -1,15 +1,15 @@
 ﻿using System.Web.Mvc;
-using JustOneDBExample.Models;
+using PostgreSQLExample.Models;
 using NHibernate;
 using NHibernate.Linq;
 
-namespace JustOneDBExample.Controllers
+namespace PostgreSQLExample.Controllers
 {
-	public class ThingyController : Controller
+	public class HomeController : Controller
 	{
 		private ISession _session;
 
-		public ThingyController(ISession session)
+		public HomeController(ISession session)
 		{
 			_session = session;
 		}
