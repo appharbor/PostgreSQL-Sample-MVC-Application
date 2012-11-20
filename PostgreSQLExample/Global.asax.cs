@@ -6,10 +6,10 @@ using System.Web.Routing;
 using FluentNHibernate.Automapping;
 using FluentNHibernate.Cfg;
 using FluentNHibernate.Cfg.Db;
-using PostgreSQLExample.Models;
-using PostgreSQLExample.Mvc;
 using NHibernate;
 using NHibernate.Tool.hbm2ddl;
+using PostgreSQLExample.Models;
+using PostgreSQLExample.Mvc;
 using StructureMap;
 using NHConfig = NHibernate.Cfg;
 
